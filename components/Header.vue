@@ -13,7 +13,6 @@
               <!-- Icon when menu is closed. -->
               <!--
                         Heroicon name: menu
-
                         Menu open: "hidden", Menu closed: "block"
                     -->
               <svg
@@ -34,7 +33,6 @@
               <!-- Icon when menu is open. -->
               <!--
                         Heroicon name: x
-
                         Menu open: "block", Menu closed: "hidden"
                     -->
               <svg
@@ -154,6 +152,6 @@
 
 <style lang="scss" scoped>
 .Header {
-  //   position: fixed;
+  // position: fixed;
 }
 </style>

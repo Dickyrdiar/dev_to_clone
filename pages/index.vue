@@ -1,11 +1,5 @@
 <template>
   <div>
-    <Display />
+    <Index />
   </div>
 </template>
-
-<style lang="scss" scoped>
-.gap {
-  height: 9ram;
-}
-</style>

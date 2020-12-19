@@ -7,10 +7,28 @@
             <h2 class="text-lg">
               <a class="no-underline hover:underline text-black">
                 <img :src="article.cover_image" />
-                {{ article.title }}
               </a>
             </h2>
           </header>
+
+          <section class="flex items- justify-betweb leading-tight p-2 md:p-4">
+            <p class="no-underline hover:underline text-black">
+              <nuxt-link :to="`/articles/` + article.id">{{
+                article.title
+              }}</nuxt-link>
+            </p>
+          </section>
+
+          <footer>
+            <div class="px-6 pt-4 pb-2">
+              <div v-for="tag in article.tag_list" :key="tag" class>
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 tag"
+                  >{{ tag }}</span
+                >
+              </div>
+            </div>
+          </footer>
         </article>
       </div>
     </div>
@@ -32,6 +50,13 @@ export default {
       this.articles = res.data
     })
   },
+
+  // methods: {
+  //   getLink(index) {
+  //     this.$router.push(`/article/${id}`)
+
+  //   },
+  // },
 }
 </script>
 
@@ -39,11 +64,14 @@ export default {
 .display-posts {
   margin-top: 7rem;
   .card {
-    width: 20rem;
-    height: 13rem;
+    width: 22rem;
+    height: 20rem;
     float: left;
-    margin-left: 4rem;
-    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    .tag {
+      float: left;
+    }
   }
 }
 </style>

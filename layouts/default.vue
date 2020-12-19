@@ -7,6 +7,6 @@
 
 <style>
 html {
-  font-family: 'Andika New Basic', sans-serif;
+  font-family: 'Andika New Basic';
 }
 </style>
