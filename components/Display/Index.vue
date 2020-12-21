@@ -65,7 +65,7 @@ export default {
   margin-top: 7rem;
   .card {
     width: 22rem;
-    height: 20rem;
+    height: 24rem;
     float: left;
     margin-left: 3rem;
     margin-top: 2rem;
