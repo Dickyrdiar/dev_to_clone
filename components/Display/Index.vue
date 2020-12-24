@@ -1,6 +1,10 @@
 <template>
   <div class="display-posts">
     <div class="md:container md:mx-auto">
+      <div v-if="error">
+        {{ error }}
+      </div>
+
       <div v-for="article in articles" :key="article.id">
         <article class="overflow-hidden rounded shadow-lg card">
           <header class="flex items- justify-betweb leading-tight p-2 md:p-4">
@@ -36,27 +40,36 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   data() {
     return {
       articles: [],
+      allArticles: [],
+      limit: 6,
+      error: null,
     }
   },
 
-  created() {
-    axios.get('https://dev.to/api/articles').then((res) => {
+  async mounted() {
+    try {
+      const res = await this.$axios.get('/articles')
       this.articles = res.data
-    })
+    } catch (error) {
+      this.error = error
+    }
   },
 
-  // methods: {
-  //   getLink(index) {
-  //     this.$router.push(`/article/${id}`)
-
-  //   },
-  // },
+  methods: {
+    loadMore() {
+      this.articles = []
+      this.current += 9
+      this.allArticles.map((item) =>
+        item.description !== null && this.articles.length < this.current
+          ? this.articles.push(item)
+          : ''
+      )
+    },
+  },
 }
 </script>
 

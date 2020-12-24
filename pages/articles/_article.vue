@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   data() {
@@ -40,12 +40,9 @@ export default {
     }
   },
 
-  created() {
-    axios
-      .get(`https://dev.to/api/articles/${this.$route.params.article}`)
-      .then((res) => {
-        this.article = res.data
-      })
+  async mounted() {
+    const res = await this.$axios.get(`/articles/${this.$route.params.article}`)
+    this.article = res.data
   },
 }
 </script>

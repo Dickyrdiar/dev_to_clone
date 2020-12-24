@@ -72,17 +72,17 @@
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a
-                  href="Podcast"
+                  href="/Podcast"
                   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >Podcast</a
                 >
                 <a
-                  href="Tags"
+                  href="/Tags"
                   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >Tags</a
                 >
                 <a
-                  href="Videos"
+                  href="/Videos"
                   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >Videos</a
                 >
@@ -133,8 +133,4 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-.Header {
-  // position: fixed;
-}
-</style>
+<style lang="scss" scoped></style>
