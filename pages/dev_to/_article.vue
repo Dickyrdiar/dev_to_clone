@@ -9,15 +9,6 @@
           {{ article.title }}
         </h1>
 
-        <!-- <div class="px-6 pt-4 pb-2">
-                <div v-for="tag in article.tag_list" :key="tag">
-                <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-smibold text-gray-700 mr-2 mb-2 tag"
-                >
-                    {{ tag }}
-                </span>
-                </div>
-            </div> -->
         <p class="text-sm md:text-base font-normal text-gray-600">
           Published {{ article.readable_publish_date }}
         </p>

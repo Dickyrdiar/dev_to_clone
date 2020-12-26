@@ -1,5 +1,5 @@
 <template>
   <div>
-    <tags />
+    <p>this is tags page</p>
   </div>
 </template>
