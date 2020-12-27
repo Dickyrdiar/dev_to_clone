@@ -15,6 +15,11 @@ export default {
           'https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap',
       },
     ],
+
+    script: [
+      { src: 'http://vjs.zencdn.net/ie8/1.1/videojs-ie8.min.js' },
+      { src: 'http://vjs.zencdn.net/5.19/video.js' },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

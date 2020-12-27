@@ -1,27 +1,27 @@
 <template>
-  <div class="podcast">
-    <div class="md:caontainer md:mx-auto">
-      <div v-for="podcast in podcasts" :key="podcast.id">
-        <article class="overflow-hidden rounded shadow-lg card">
-          <header class="lex items- justify-betweb leading-tight p-2 md:p-4">
-            <h2 class="text-lg">
-              <a class="no-underline hover:underline text-black">
-                <nuxt-link :to="`/dev_to/podcast/` + podcast.id">
-                  <img :src="podcast.image_url" />
-                </nuxt-link>
-              </a>
-            </h2>
-          </header>
-
-          <section class="flex-items- justify-betweb leading-tight p-2 md:p-4">
-            <!-- <p class="no-underline hover:underline text-black">
-              {{ podcast.title }}
-            </p> -->
-          </section>
-        </article>
+  <div class="index">
+    <!-- <div v-if="podcasts && podcasts.length"> -->
+    <main class="max-w-5xl mx-auto pb-10 pt-10">
+      <div class="flex flex-wrap overflow-hidden">
+        <!-- post -->
+        <div v-for="podcast in podcasts" :key="podcast.id">
+          <div class="mr-2 md:mr-4 ml-2">
+            <div class="pb-10">
+              <!-- first post -->
+              <p>{{ podcast.title }}</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   </div>
+
+  <!-- <div v-if="errors & errors.length">
+      <div v-for="error of errors">
+        <p>{{ error.message }}</p>
+      </div>
+    </div> -->
+  <!-- </div> -->
 </template>
 
 <script>

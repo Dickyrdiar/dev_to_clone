@@ -70,6 +70,7 @@ export default {
       // allArticles: [],
       // limit: 6,
       errors: null,
+      tags: [],
     }
   },
 
