@@ -21,10 +21,6 @@
             <li class="inline-block">
               <a class="block font-semibold px-3" href="/Podcast">Podcast</a>
             </li>
-
-            <!-- <li class="inline-block">
-              <a class="block font-semibold px-3" href="#">Article</a>
-            </li> -->
           </ul>
         </nav>
 
@@ -52,8 +48,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.header {
-  // position: fixed;
-}
-</style>
+<style lang="scss" scoped></style>

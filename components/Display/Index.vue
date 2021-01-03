@@ -39,12 +39,6 @@
                         >
                       </div>
                     </div>
-
-                    <!-- <div class="flex flex-wrap justify">
-                      <div class="w-6/12 sm:w-4/12 px-4">
-                        
-                      </div>
-                    </div> -->
                   </footer>
                 </article>
               </div>
@@ -53,12 +47,6 @@
         </div>
       </main>
     </div>
-
-    <!-- <div v-if="errors & errors.length">
-      <div v-for="error of errors">
-        <p>{{ error.message }}</p>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -67,12 +55,13 @@ export default {
   data() {
     return {
       articles: [],
-      // allArticles: [],
-      // limit: 6,
       errors: null,
       tags: [],
+      search: null,
     }
   },
+
+  computed: {},
 
   async mounted() {
     try {
@@ -81,18 +70,6 @@ export default {
     } catch (error) {
       this.error = error
     }
-  },
-
-  methods: {
-    loadMore() {
-      this.articles = []
-      this.current += 9
-      this.allArticles.map((item) =>
-        item.description !== null && this.articles.length < this.current
-          ? this.articles.push(item)
-          : ''
-      )
-    },
   },
 }
 </script>

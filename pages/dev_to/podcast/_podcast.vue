@@ -6,7 +6,7 @@
         <h3
           class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl"
         >
-          {{ podcast.title }}
+          <p>podcast is here</p>
         </h3>
       </div>
     </div>
@@ -15,17 +15,16 @@
 
 <script>
 export default {
-  data() {
-    return {
-      podcast: {},
-    }
-  },
-
-  async mounted() {
-    const res = await this.$axios.get(
-      `/podcast_episodes/${this.$route.params.podcast}`
-    )
-    this.podcast = res.data
-  },
+  // data() {
+  //   return {
+  //     podcast: {},
+  //   }
+  // },
+  // async mounted() {
+  //   const res = await this.$axios.get(
+  //     `/podcast_episodes/${this.$route.params.podcast}`
+  //   )
+  //   this.podcast = res.data
+  // },
 }
 </script>

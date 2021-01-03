@@ -2,7 +2,7 @@
   <div class="search">
     <div class="relative mx-auto text-gray-600 lg:block hidden">
       <input
-        v-model.trim="search"
+        v-model="searchQuery"
         class="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
         type="search"
         name="search"
@@ -33,29 +33,11 @@
 
 <script>
 export default {
-  data() {
+  data: function () {
     return {
-      search: '',
+      searchQuery: '',
       articles: [],
     }
   },
-
-  mounted() {
-    console.log('Component Mounted')
-  },
-
-  // methods: {
-  //     getAllArticles() {
-  //         const res = await this.$axios.get('/articles')
-  //         const articles = res.data
-  //     }
-  //     .then(res => {
-  //         if (this.search) {
-  //             this.articles = res.result.filter(articles => {
-
-  //             })
-  //         }
-  //     })
-  // },
 }
 </script>
