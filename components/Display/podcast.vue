@@ -1,6 +1,6 @@
 <template>
-  <div class="podcast">
-    <main class="max-w-5xl mx-auto pb-10 pt-10">
+  <div class="podcast bg-white dark:bg-gray-900 text-sm">
+    <main class="max-w-5xl mx-auto">
       <div class="flex flex-wrap overflow-hidden">
         <!-- post -->
         <div v-for="podcast in podcasts" :key="podcast.id">
@@ -22,7 +22,7 @@
                 <section
                   class="flex items- justify-betweb leading-tight p-2 md:p-4"
                 >
-                  <p class="no-underline hover:underline text-black">
+                  <p class="no-underline hover:underline text-gray-600">
                     <nuxt-link :to="`/dev_to/podcast/` + podcast.id">
                       {{ podcast.title }}
                     </nuxt-link>
