@@ -1,49 +1,79 @@
 <template>
-  <div class="header">
-    <header class="max-w-5xl mx-auto pt-5">
-      <div class="flex flex-wrap -mx-2 overflow-hidden px-5 lg:px-2 my-2">
-        <div
-          class="px-2 w-full overflow-hidden md:w-1/6 xl:w-1/3 text-center md:text-left"
+  <div class="header bg-grey-light font-sans leading-normal tracking-normal">
+    <nav
+      class="flex items-center justify-between flex-wrap bg-grey-darkest p-6 fixed w-full z-10 pin-t"
+    >
+      <div class="flex items-center flex-no-shrink text-white mr-6">
+        <a
+          class="text-white no-underline hover:text-white hover:no-underline"
+          href="#"
         >
-          <h1 class="font-bold text-2xl font-sherif">
-            <a href="/">WorkFlow </a>
-          </h1>
-        </div>
-
-        <nav
-          class="my-2 px-2 w-full oferflow-hidden md:w-3/6 lg:w1/3 xl:w-1/3 text-center md:text-left"
-        >
-          <ul>
-            <li class="inline-block">
-              <a class="block font-semibold px-3" href="/Videos">Videos</a>
-            </li>
-
-            <li class="inline-block">
-              <a class="block font-semibold px-3" href="/Podcast">Podcast</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div
-          class="my-2 px-2 w-full overflow-hidden md:w-2/6 lg:w-1/3 text-center md:text-right"
-        >
-          <Search />
-        </div>
+          <span class="text-2xl pl-2"
+            ><i class="em em-grinning"></i> Brand McBrandface</span
+          >
+        </a>
       </div>
-    </header>
+
+      <div class="block lg:hidden">
+        <button
+          id="nav-toggle"
+          class="flex items-center px-3 py-2 border rounded text-grey border-grey-dark hover:text-white hover:border-white"
+        >
+          <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+
+      <div
+        id="nav-content"
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0"
+      >
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-white no-underline" href="#"
+              >Active</a
+            >
+          </li>
+          <li class="mr-3">
+            <a
+              class="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4"
+              href="#"
+              >link</a
+            >
+          </li>
+          <li class="mr-3">
+            <a
+              class="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4"
+              href="#"
+              >link</a
+            >
+          </li>
+          <li class="mr-3">
+            <a
+              class="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4"
+              href="#"
+              >link</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      message: null,
-    }
-  },
-
-  mounted() {
-    this.tick
+  methods: {
+    toggle() {
+      this.$colorMode.preference =
+        this.$colorMode.value == 'light' ? 'dark' : 'light'
+    },
   },
 }
 </script>

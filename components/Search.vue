@@ -2,13 +2,18 @@
   <div class="search">
     <div class="relative mx-auto text-gray-600 lg:block hidden">
       <input
-        v-model="searchQuery"
         class="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
         type="search"
+        :list="aricles"
+        :keys="[title]"
         name="search"
         placeholder="Search"
       />
-      <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
+      <button
+        type="submit"
+        class="absolute right-0 top-0 mt-3 mr-2"
+        @click="runSearch"
+      >
         <svg
           id="Capa_1"
           class="text-gray-600 h-4 w-4 fill-current"
@@ -32,12 +37,5 @@
 </template>
 
 <script>
-export default {
-  data: function () {
-    return {
-      searchQuery: '',
-      articles: [],
-    }
-  },
-}
+export default {}
 </script>
