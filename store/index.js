@@ -1,22 +1,30 @@
+import Article from './Article'
+
 export const state = () => ({
   articles: [],
-  loading: true,
+  article: {},
 })
-
-export const actions = {
-  // articles call
-  async loadData({ commit }) {
-    const articlesPage = await this.$axios.get('/articles')
-    const articles = articlesPage.data
-    commit('SET_ARTICLES', articles)
-    commit('CHANGE _LOADING', false)
-  },
-}
 
 export const mutations = {
   SET_ARTICLES(state, articles) {
     state.articles = articles
   },
+
+  SET_ARTICLE(state, article) {
+    state.article = article
+  },
 }
 
-export const getters = {}
+export const actions = {
+  getArticles({ commit }) {
+    Article.all().then((response) => {
+      commit('SET_ARTICLES', response.data)
+    })
+  },
+
+  getArticle({ commit }, articleId) {
+    Article.show(articleId).then((response) => {
+      commit('SET_ARTICLE', response.data)
+    })
+  },
+}
