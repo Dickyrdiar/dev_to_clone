@@ -1,6 +1,6 @@
 <template>
-  <div class="index mx-11">
-    <div class="container md:mx-auto text-center md:text-left">
+  <div class="index mx-11 text-right bg-gray-100">
+    <div class="container md:mx-auto text-center">
       <div v-for="article in articles" :key="article.id" :article="article">
         <article
           class="overflow-hidden rounded shadow-lg md:my-12 mx-5 mt-6 card"
@@ -24,7 +24,7 @@
 
           <section class="flex items-justify-betweb leading-tight p-2 md:p-4">
             <p class="no-underline hover:underline text-black">
-              <nuxt-link :to="`/article/` + article.id">{{
+              <nuxt-link :to="`/devto/` + article.id">{{
                 article.title
               }}</nuxt-link>
             </p>
@@ -72,6 +72,7 @@ export default {
     width: 20rem;
     height: 24rem;
     float: left;
+    margin-left: 3rem;
     .tag {
       float: left;
     }

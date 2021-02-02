@@ -13,7 +13,7 @@ export default {
   },
 
   mounted() {
-    this.getArticle(this.id)
+    this.getArticle(this.$route.params.id)
     console.log(this.article)
   },
 
