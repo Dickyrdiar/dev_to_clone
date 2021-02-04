@@ -1,13 +1,18 @@
 <template>
   <div class="relative mx-auto text-gray-600 lg:block hidden">
     <input
+      v-model="keyword"
       class="border-2 border-gray-300 bg-white h-10 pl-2 pr8 rounded-lg text-sm focus-outline-non"
       type="search"
       name="search"
       placeholder="search"
     />
 
-    <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
+    <button
+      type="submit"
+      class="absolute right-0 top-0 mt-3 mr-2"
+      @click="findKey"
+    >
       <svg
         id="Capa_1"
         class="text-gray-600 h-4 w-4 fill-current"
@@ -28,3 +33,33 @@
     </button>
   </div>
 </template>
+
+<script>
+import axios from 'axios'
+
+export default {
+  data() {
+    return {
+      keyword: '',
+    }
+  },
+
+  methods: {
+    findKey() {
+      // eslint-disable-next-line no-undef
+      axios
+        .get(`https://dev.to/api/articles/`, {
+          params: {
+            search: this.keyword,
+          },
+        })
+        .then((res) => {
+          console.log(res.data.results)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+  },
+}
+</script>

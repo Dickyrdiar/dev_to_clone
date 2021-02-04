@@ -11,13 +11,9 @@
                 class="w-32 h-32 md:w-48 md:h-auto md:rouded-non rounded-full mx-auto"
               >
                 <!-- <img :src="article.cover_image" /> -->
-                <div v-if="article.cover_image < 0">
-                  <img src="~/assets/images/download.png" />
-                </div>
-
-                <div v-else>
+                <nuxt-link :to="`/devto/` + article.id">
                   <img :src="article.cover_image" />
-                </div>
+                </nuxt-link>
               </a>
             </h3>
           </header>
