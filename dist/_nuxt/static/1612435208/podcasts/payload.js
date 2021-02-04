@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/podcasts", {data:[{}],fetch:[],mutations:[]});
