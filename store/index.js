@@ -1,5 +1,6 @@
 import Article from './Article'
 import Videos from './Video'
+import Podcast from './Podcast'
 
 export const state = () => ({
   articles: [],
@@ -8,6 +9,10 @@ export const state = () => ({
   // video
   videos: [],
   video: {},
+
+  // podcast
+  podcast_episodes: [],
+  podcast: {},
 })
 
 export const mutations = {
@@ -54,6 +59,19 @@ export const actions = {
   getVideo({ commit }, id) {
     Videos.show(id).then((response) => {
       commit('SET_VIDEO', response.data)
+    })
+  },
+
+  // call podcasts
+  getPodcasts({ commit }) {
+    Podcast.all().then((response) => {
+      commit('SET_PODCASTS', response.data)
+    })
+  },
+
+  getPodcast({ commit }, id) {
+    Podcast.show(id).then((response) => {
+      commit('SET_PODCAST', response.data)
     })
   },
 }

@@ -21,7 +21,7 @@
               <a class="block font-semibold px-3" href="/">Home</a>
             </li>
             <li class="inline-block">
-              <a class="block font-semibold px-3" href="#">Podcast</a>
+              <a class="block font-semibold px-3" href="/podcasts">Podcast</a>
             </li>
             <li class="inline-block">
               <a class="block font-semibold px-3" href="/videos">Video</a>
@@ -38,12 +38,5 @@
     </header>
   </div>
 </template>
-
-<script>
-import BaseSearch from './Display/atoms/BaseSearch.vue'
-export default {
-  components: { BaseSearch },
-}
-</script>
 
 <style lang="scss" scoped></style>
