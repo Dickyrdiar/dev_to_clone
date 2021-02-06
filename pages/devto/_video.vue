@@ -1,6 +1,9 @@
 <template>
   <div class="video">
-    <p>{{ video.video_duration_in_minutes }}</p>
+    <video>
+      <source :src="video.video_source_url" type="video" />
+    </video>
+    <p>{{ video.title }}</p>
   </div>
 </template>
 
@@ -13,7 +16,7 @@ export default {
   },
 
   mounted() {
-    this.getVideo(this.video_id)
+    this.getVideo(this.$route.params.video)
     console.log(this.video)
   },
 

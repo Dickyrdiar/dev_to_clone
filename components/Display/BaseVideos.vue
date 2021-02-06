@@ -20,7 +20,7 @@
 
           <section class="flex items-justify-betweb leading-tight p-2 md:p-4">
             <p class="no-underline text-black">
-              {{ video.video_duration_in_minutes }}
+              {{ video.title }}
             </p>
           </section>
         </article>
@@ -48,15 +48,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.videos {
-  .video {
-    width: 20rem;
-    height: 24rem;
-    float: left;
-    margin-left: 3rem;
-    .tag {
-      float: left;
-    }
-  }
-}
+@import '~/assets/sass/card';
 </style>
