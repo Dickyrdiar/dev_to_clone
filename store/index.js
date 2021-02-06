@@ -33,6 +33,15 @@ export const mutations = {
   SET_VIDEO(state, video) {
     state.video = video
   },
+
+  // podcast
+  SET_PODCASTS(state, podcast_episodes) {
+    state.podcast_episodes = podcast_episodes
+  },
+
+  SET_PODCAST(state, podcast) {
+    state.podcast = podcast
+  },
 }
 
 export const actions = {

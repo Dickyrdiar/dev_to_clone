@@ -64,14 +64,6 @@ export default {
 
 <style lang="scss" scoped>
 .index {
-  .card {
-    width: 20rem;
-    height: 24rem;
-    float: left;
-    margin-left: 3rem;
-    .tag {
-      float: left;
-    }
-  }
+  @import '~/assets/sass/card';
 }
 </style>
